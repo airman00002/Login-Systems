@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#b2bec3;">
+<a href="/" class="navbar-brand mx-4 fa-2x"><strong >LogIn</strong></a>
+<ul class="navbar-nav">
+    <% if(locals.user) {%>
+     <li class="nav-item">
+          <a href="/members" class="nav-link"><strong>Member</strong></a>
+     </li>
+     <li class="nav-item">
+          <a href="/users/logout" class="nav-link"><strong>Logout</strong></a>
+     </li>
+     <%}%>
+     <% if(!locals.user) {%>
+     <li class="nav-item">
+          <a href="/users/register" class="nav-link"><strong>Register</strong></a>
+     </li>
+     <li class="nav-item">
+          <a href="/users/login" class="nav-link"><strong>Login</strong></a>
+     </li>
+     <%}%>
+</ul>
+</nav>

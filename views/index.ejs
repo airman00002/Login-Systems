@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login System</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title>Login</title>
+
+</head>
+
+<body>
+  <%- include navbar %>
+    <div class="container offset-lg-5 col-lg-2 col-sm-5 my-5">
+      <%- messages() %>
+        <h1><strong>ยินดีต้อนรับ</strong></h1>
+        <%if(locals.user){%>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>
+                  <%=user.name%>
+                </td>
+                <td>
+                  <%=user.email%>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <%}else{%>
+            <div class="alert alert-danger">
+              <h1>ไม่มีข้อมูล</h1>
+            </div>
+            <%}%>
+    </div>
+    <script>
+      $('#messages').addClass('alert alert-success')
+
+
+    </script>
+</body>
+
+</html>
