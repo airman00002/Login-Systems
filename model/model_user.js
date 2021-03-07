@@ -2,7 +2,7 @@ var mongo = require("mongodb");
 var mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
-const url = "mongodb://localhost:27017/LoginDB2";
+const url = "mongodb+srv://admin:123456abcd@react-mern-node.z6bkl.mongodb.net/LoginDB?retryWrites=true&w=majority";
 mongoose.connect(url, { useNewUrlParser: true ,useUnifiedTopology: true });
 
 var db = mongoose.connection;
