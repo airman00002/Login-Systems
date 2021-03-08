@@ -16,13 +16,13 @@
   <body>
     <%- include navbar %>
           <% if(locals.errors){ %>
-               <ul class="offset-lg-5 offset-sm-3 col-lg-2 col-sm-6 my-5 alert alert-danger">
+               <ul class="offset-lg-4 offset-sm-3 col-lg-4 col-sm-6 my-5 alert alert-danger">
                     <% Object.values(errors).forEach(err => {%>
                          <li class="mx-4"><%= err.msg %></li>
                     <%})%>
                </ul>
           <%}%>
-    <div class="container offset-lg-5 col-lg-2 col-sm-5 my-5" 
+    <div class="container offset-lg-4 col-lg-4 col-sm-5 my-5" 
           style="background-color:  rgb(185, 199, 199);border-radius: 10px;">
           <h1 align = "center">Register</h1>
           <form class="form-group" action="/users/register" method="post">
